@@ -13,7 +13,7 @@ export default function Welcome() {
     <View style={styles.container}>
       <Text style={styles.title}>Bienvenido a mi App</Text>
       <Image
-        source={require("../../assets/splash-icon.png")}
+        source={require("../../assets/SofyanAmrabat.jpg")}
         style={styles.image}
       />
       <Text style={styles.subtitle}>
