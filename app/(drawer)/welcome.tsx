@@ -12,8 +12,13 @@ export default function Welcome() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Bienvenido a mi App</Text>
-      <Image source={require("../../assets/splash-icon.png")} style={styles.image} />
-      <Text style={styles.subtitle}>Explora mi portfolio con tus proyectos y hobbies.</Text>
+      <Image
+        source={require("../../assets/splash-icon.png")}
+        style={styles.image}
+      />
+      <Text style={styles.subtitle}>
+        Explora mi portfolio con tus proyectos y hobbies.
+      </Text>
 
       <TouchableOpacity style={styles.button} onPress={goToPortfolio}>
         <Text style={styles.buttonText}>Ir al Portfolio</Text>
@@ -23,61 +28,20 @@ export default function Welcome() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 20 },
-  title: { fontSize: 26, fontWeight: "700", marginBottom: 12 },
-  image: { width: 160, height: 160, marginBottom: 12 },
-  subtitle: { textAlign: "center", marginBottom: 20 },
-  button: { backgroundColor: "#4caf50", paddingVertical: 12, paddingHorizontal: 20, borderRadius: 8 },
-  buttonText: { color: "white", fontWeight: "700" },
-});
-import { View, Text, Button, StyleSheet, Image } from "react-native";
-import { router } from "expo-router";
-
-export default function WelcomeScreen() {
-  const NavigateToPortfolio = () => {
-    router.replace("/(drawer)/(tabs)/user-info");
-  };
-
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>¡Bienvenido Amigooooooo!</Text>
-
-      <Image
-        source={require("../../assets/SofyanAmrabat.jpg")}
-        style={styles.welcomeImage}
-      />
-
-      <Text style={styles.message}>
-        Este es Adrian, el + sesi.
-      </Text>
-
-      <Button title="Ver mi Portfolio" onPress={NavigateToPortfolio} />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    padding: 20,
   },
-  title: {
-    fontSize: 28,
-    fontWeight: "bold",
-    color: "#333",
-    textAlign: "center",
+  title: { fontSize: 26, fontWeight: "700", marginBottom: 12 },
+  image: { width: 160, height: 160, marginBottom: 12 },
+  subtitle: { textAlign: "center", marginBottom: 20 },
+  button: {
+    backgroundColor: "#4caf50",
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
   },
-  welcomeImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
-    marginBottom: 30,
-    borderWidth: 3,
-  },
-  message: {
-    fontSize: 18,
-    textAlign: "center",
-    marginBottom: 40,
-  },
+  buttonText: { color: "white", fontWeight: "700" },
 });
