@@ -6,13 +6,19 @@ export default function DrawerLayout() {
       <Drawer.Screen
         name="welcome"
         options={{
-          title: "Welcome",
+          title: "Bienvenida",
         }}
       />
       <Drawer.Screen
         name="(tabs)"
         options={{
           title: "Portfolio App",
+        }}
+      />
+      <Drawer.Screen
+        name="mylist"
+        options={{
+          title: "My List - Football",
         }}
       />
     </Drawer>
